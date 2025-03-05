@@ -16,7 +16,7 @@
     "prettier": "prettier -c .",
     "prettier:fix": "npm run prettier -- --write",
     "dev": "VITE_CJS_IGNORE_WARNING=true vite",
-    "build": "VITE_CJS_IGNORE_WARNING=true vite build && cp LICENSE icon.png package.json dist/"
+    "build": "cross-env VITE_CJS_IGNORE_WARNING=true vite build && shx cp LICENSE icon.png package.json dist/"    
   },
   "dependencies": {
     "@logseq/libs": "^0.0.17",
@@ -52,6 +52,7 @@
     "@typescript-eslint/parser": "^7.8.0",
     "@vitejs/plugin-vue": "^5.0.4",
     "autoprefixer": "^10.4.19",
+    "cross-env": "^7.0.3",
     "eslint": "8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "postcss": "^8.4.38",

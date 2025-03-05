@@ -429,10 +429,10 @@ export const useMarkmap = defineStore('markmap', {
               : '- ') + topic
           )
 
-          if (
+          if ( properties?.markMapChildren !== 'hidden' &&
             children &&
-            (it['collapsed?'] !== true || collapsed !== 'hidden')
-          ) {
+            (it['collapsed?'] !== true || collapsed !== 'hidden' )
+          ) {            
             ret +=
               '\n\n' +
               (await walkTransformBlocks(children, depth + 1, config)).join(

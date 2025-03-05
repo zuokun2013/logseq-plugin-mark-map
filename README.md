@@ -21,6 +21,9 @@ This is a plugin for [Logseq](https://github.com/logseq/logseq) to provide mindm
 
 ```
 npm install
+npm install cross-env --save-dev
+npm install shx --save-dev
+
 npm run build:prod # For real
 npm run build # For development
 ```
@@ -133,6 +136,7 @@ There are so many shortcuts for each action.
 
 ### Block properties
 
+- `mark-map-children:: hidden`, a block property, to hide the children blocks.
 - `mark-map-display:: hidden`, a block property, to hide the block.
 - `mark-map-cut:: 30`, a block property, to limit mindmap node text length.
 - `mark-map-limit:: N`, to limit block next level block list items.

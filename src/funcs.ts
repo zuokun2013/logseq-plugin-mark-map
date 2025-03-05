@@ -522,7 +522,7 @@ export const walkTransformBlocksFilter = async (blocks) => {
   if (blocks && blocks.length > 0) {
     for (const it of blocks) {
       // uuid, title, content, properties
-      let { children } = it
+      let { children } = it      
       children = await children
       if (children) {
         it.children = await walkTransformBlocksFilter(children)
